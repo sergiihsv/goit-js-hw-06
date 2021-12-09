@@ -7,37 +7,31 @@ const ingredients = [
   'Condiments',
 ];
 
- const ulEl = document.querySelector("#ingredients");
+ 
+const ulEl = document.querySelector("#ingredients");
 
+const createLiEl = ingredients => {
+  return ingredients.map(ingredient => {
+  const LiEl = document.createElement('li');
+  LiEl.textContent = ingredient;
+  LiEl.classList.add('item');
 
-const elements = ingredients.map(ingredient => {
-  
-const createLiEl = document.createElement('li');
-createLiEl.textContent = '';
-createLiEl.classList.add('item');
-
-  return createLiEl;
+  return LiEl;
 }
-)
-  
+);
+}
 
-/* elements(ingredients); */
+const elements = createLiEl(ingredients);
 ulEl.append(...elements);
 
 
+/* const createLiEl = ingredients.map(ingredient => {
+  const LiEl = document.createElement('li');
+  LiEl.textContent = ingredient;
+  LiEl.classList.add('item');
 
-/* const createLiEl = document.createElement('li');
-createLiEl.textContent = '';
-createLiEl.classList.add('item'); */
-
-
-
-
-
-
-
-
-console.log(ulEl);
-
-
-
+  return LiEl;
+}
+);
+  
+ulEl.append(...createLiEl); */
