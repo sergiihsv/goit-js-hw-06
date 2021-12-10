@@ -25,13 +25,3 @@ const elements = createLiEl(ingredients);
 ulEl.append(...elements);
 
 
-/* const createLiEl = ingredients.map(ingredient => {
-  const LiEl = document.createElement('li');
-  LiEl.textContent = ingredient;
-  LiEl.classList.add('item');
-
-  return LiEl;
-}
-);
-  
-ulEl.append(...createLiEl); */
