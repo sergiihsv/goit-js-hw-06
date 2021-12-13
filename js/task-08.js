@@ -1,11 +1,10 @@
-const formSubmit = document.querySelector('.login-form');
+const formSubmit = document.querySelector(".login-form");
 
 const onFormSubmit = (event) => {
-    
-    event.preventDefault();
+  event.preventDefault();
 
-const {
-    elements: { email, password }
+  const {
+    elements: { email, password },
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
@@ -14,7 +13,6 @@ const {
 
   console.log(`Email: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
-
 };
 
-formSubmit.addEventListener('submit', onFormSubmit);
+formSubmit.addEventListener("submit", onFormSubmit);
