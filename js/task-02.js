@@ -9,15 +9,15 @@ const ingredients = [
 
 const ulEl = document.querySelector("#ingredients");
 
-const createLiEl = (ingredients) => {
+const createliEl = (ingredients) => {
   return ingredients.map((ingredient) => {
-    const LiEl = document.createElement("li");
-    LiEl.textContent = ingredient;
-    LiEl.classList.add("item");
+    const liEl = document.createElement("li");
+    liEl.textContent = ingredient;
+    liEl.classList.add("item");
 
-    return LiEl;
+    return liEl;
   });
 };
 
-const elements = createLiEl(ingredients);
+const elements = createliEl(ingredients);
 ulEl.append(...elements);
